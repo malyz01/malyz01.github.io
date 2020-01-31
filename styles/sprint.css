@@ -19,9 +19,9 @@ hr {
 }
 
 .sTopic {
-  font-family: "Shanti", sans-serif;
+  font-family: "Fira Sans", sans-serif;
   font-size: 2rem;
-  text-align: center;
+  text-align: left;
   opacity: 0.6;
 }
 

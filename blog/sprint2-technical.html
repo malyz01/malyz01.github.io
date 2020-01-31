@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Fira+Sans:400,800|Shanti|Work+Sans:400,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="../styles/themes/semantic.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="../styles/styles.css" />
+    <link rel="stylesheet" href="../styles/sprint.css" />
+    <link href="../styles/themes/prism.css" rel="stylesheet" />
+
+    <script src="../js/prism.js"></script>
+    <script
+      src="https://kit.fontawesome.com/3278f04ffd.js"
+      crossorigin="anonymous"
+    ></script>
+<style>
+  span.inline {
+    display: inline;
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+    padding: 5px;
+    border: 5px solid black;
+    background-color: #27ddce;
+    color:antiquewhite;
+  }
+  span.inlineblock {
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+    padding: 5px;
+    border: 5px solid black;
+    background-color: #27ddce;
+    color:antiquewhite;
+  }
+</style>
+
+    <title>Sprint 2</title>
+  </head>
+
+  <body>
+    <div class="ui raised segment">
+      <div class="ui container">
+        <nav>
+          <a href="../index.html">
+            <div class="navLogo">
+              foundation<span class="navLogoSpan">Blog</span>
+            </div>
+          </a>
+          <div class="navLinks">
+            <div class="navItem"><a href="../index.html">home</a></div>
+            <div class="navItem"><a href="../sprints.html">sprints</a></div>
+            <div class="navItem"><a href="../projects.html">projects</a></div>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <div class="mainContainer">
+      <div class="sHeader">
+        Sprint 2 - Technical
+      </div>
+      <div class="sContainer">
+        <div class="sTopic">
+          What does it mean to display inline vs inline blocks?
+        </div>
+        <hr />
+        <section>
+          <div class="sTitle">Display inline</div>
+          <div class="sBody">
+            <p>With <strong>display: inline</strong>, the element will stay inline with the element it was nested in and the following css properties are ignored:
+              <ul>
+                <li>height</li>
+                <li>width</li>
+                <li>margin-top</li>
+                <li>margin-bottom</li>
+                <li>float</li>
+              </ul> 
+            </p>
+            <p><strong>Code:</strong></p>
+<pre>
+<code class="language-css">span.inline {
+display: inline;
+width: 200px; /* ignored */
+height: 200px; /* ignored */
+margin: 20px; /* ignored the top and bottom part but not the left and right */
+padding: 5px;
+border: 5px solid black;
+background-color: #27ddce;
+color:antiquewhite;
+}
+</code></pre>
+            <p><strong>Result:</strong></p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo in odit autem ratione <span class="inline">praesentium totam</span>. Nulla esse
+              quaerat adipisci tenetur, quia eos commodi doloremque nemo dolore vel laborum magni est?
+            </p>
+          </div>
+        </section>
+        <section>
+          <div class="sTitle">Display inline-block</div>
+          <div class="sBody">
+            <p>With <strong>display: inline-block</strong>, the element will stay inline with the element it was nested in and all the css properties are applied.
+            </p>
+            <p><strong>Code:</strong></p>
+<pre>
+<code class="language-css">span.inlineblock {
+display: inline-block;;
+width: 200px;
+height: 200px;
+margin: 20px;
+padding: 5px;
+border: 5px solid black;
+background-color: #27ddce;
+color:antiquewhite;
+}
+</code></pre>
+            <p><strong>Result:</strong></p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo in odit autem ratione <span
+                class="inlineblock">praesentium totam</span>. Nulla esse
+              quaerat adipisci tenetur, quia eos commodi doloremque nemo dolore vel laborum magni est?
+            </p>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <div class="ui raised segment footerContainer">
+      <div class="footerContent">
+        <a href="mailto:mattuy001@gmail.com">
+          <i class="far fa-envelope fa-lg"></i>
+        </a>
+        <a href="https://github.com/malyz01">
+          <i class="fab fa-github fa-lg"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/matthew-philip-uy-7b305815a/">
+          <i class="fab fa-linkedin-in fa-lg"></i>
+        </a>
+        <h3>
+          &copy Matthew Uy
+          <script type="text/javascript">
+            document.write(new Date(Date.now()).getFullYear());
+          </script>
+        </h3>
+      </div>
+    </div>
+  </body>
+</html>
