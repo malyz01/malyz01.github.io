@@ -1,0 +1,130 @@
+body {
+  background-image: url(calc.jpg);
+  background-size: auto;
+  color: black;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Noto Sans", sans-serif;
+}
+
+p {
+  font-family: "Hind", sans-serif;
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  color: inherit;
+}
+
+.ui.button {
+  min-width: 100.01px;
+}
+
+.main {
+  padding-top: 220px;
+  transition: all 0.3s ease;
+}
+
+.mainContainer {
+  min-width: 350px !important;
+  max-width: 500px !important;
+  margin: 0 auto !important;
+  padding: 2rem 2rem 1.5rem !important;
+  background-image: linear-gradient(to bottom, #f3f2f1, #e7e7e6) !important;
+  border-radius: 20px !important;
+  -webkit-box-shadow: 6px 10px 16px 0px rgba(138, 138, 138, 1);
+  -moz-box-shadow: 6px 10px 16px 0px rgba(138, 138, 138, 1);
+  box-shadow: 6px 7px 5px 0px rgba(153, 152, 151, 0.75) !important;
+}
+
+.title {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1.2rem;
+  opacity: 0.15;
+}
+
+.displayContainer {
+  border-radius: 12px !important;
+  border: 2px solid #cecece !important;
+}
+
+.history {
+  font-family: "Martel Sans", sans-serif;
+  min-height: 1.4rem;
+  font-size: 0.9rem;
+  text-align: right;
+  margin-bottom: 4px;
+}
+
+.display {
+  text-align: right;
+  font-size: 2rem;
+}
+
+.btnContainer {
+  margin: 0 auto !important;
+}
+
+.btnE {
+  width: 204px !important;
+}
+
+.num {
+  background: linear-gradient(#fbf9f7, #efedea) !important;
+  position: relative;
+  box-shadow: 2px 2.5px 5px #b0afae !important;
+}
+
+.num:active {
+  box-shadow: none !important;
+  background: linear-gradient(#efedea, #fbf9f7) !important;
+}
+
+.misc {
+  background: linear-gradient(#8e8e8e, #616161) !important;
+  color: white !important;
+  position: relative;
+  box-shadow: 2px 2.5px 5px #b0afae !important;
+}
+
+.misc:active {
+  box-shadow: none !important;
+  background: linear-gradient(#616161, #8e8e8e) !important;
+}
+
+.eqOff {
+  background: linear-gradient(#fe8b69, #d15d34) !important;
+  color: white !important;
+  position: relative;
+  box-shadow: 2px 2.5px 5px #b0afae !important;
+}
+
+.eqOff:active {
+  box-shadow: none !important;
+  background: #d15d34 !important;
+  background: linear-gradient(#d15d34, #fe8b69) !important;
+}
+
+@media only screen and (max-width: 600px) {
+  .main {
+    padding-top: 30px;
+  }
+
+  .ui.button {
+    min-width: 68px;
+    font-size: 1rem !important;
+  }
+}

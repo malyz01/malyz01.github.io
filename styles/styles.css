@@ -1,0 +1,189 @@
+/* 
+font-family: 'Fira Sans', sans-serif;
+font-family: 'Work Sans', sans-serif;
+font-family: 'Shanti', sans-serif;
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Shanti", sans-serif;
+}
+
+h3 {
+  margin-top: 0.5rem;
+}
+
+header {
+  text-align: center;
+  opacity: 0.9;
+  margin: 2rem auto 4rem;
+}
+
+li {
+  font-family: "Fira Sans", sans-serif;
+}
+
+body {
+  font-family: "Work Sans", sans-serif;
+  font-size: 1.2rem;
+}
+
+ul {
+  margin: 1rem 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+  display: inline;
+  padding: 0 1rem;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: inherit;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+article {
+  margin: 2rem 0 4rem;
+}
+
+section {
+  margin: 0 auto 4rem;
+  max-width: 800px;
+}
+
+pre {
+  padding: 0.5rem 1rem !important;
+  margin-bottom: 1rem !important;
+}
+
+.ui.container {
+  padding-top: 2rem;
+}
+
+.mainContainer {
+  min-height: 686px;
+  padding: 2rem 1rem;
+  animation: slide 0.5s ease;
+  animation-fill-mode: both;
+}
+
+.navLinks,
+.navItem {
+  transition: 0.3s ease-in-out;
+}
+
+.navLogo {
+  align-self: center;
+  font-size: 1.7rem;
+  font-family: "Shanti", sans-serif;
+  transition: 0.5s ease-in-out;
+}
+
+.navLogoSpan {
+  font-weight: bold;
+  color: #27ddce;
+}
+
+.navLinks {
+  font-size: 1.3rem;
+  display: flex;
+}
+
+.navItem {
+  margin: 0 1.5rem;
+  position: relative;
+}
+
+.navItem::before {
+  content: "";
+  border-bottom: 3px solid #16afa0;
+  width: 100%;
+  height: 130%;
+  z-index: -1;
+  position: absolute;
+  opacity: 0;
+  transition: all 0.2s ease;
+}
+
+.navItem:hover::before {
+  height: 115%;
+  opacity: 1;
+}
+
+.navItem:hover {
+  transform: translateY(-1px);
+}
+
+.footerContainer {
+  text-align: center;
+  margin-top: 4rem !important;
+  min-height: 100px;
+  display: flex;
+  background-image: linear-gradient(to right, #16afa0, #09897a) !important;
+}
+
+.footerContent {
+  align-self: center;
+  margin: auto;
+  color: white;
+  min-width: 300px;
+}
+
+.footerContent > h3 {
+  text-shadow: 1px 1px #111111;
+}
+
+.footerLink {
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+  .navLogo {
+    align-self: center;
+    font-size: 1.4rem;
+    font-family: "Shanti", sans-serif;
+  }
+
+  .navLinks {
+    font-size: 1rem;
+  }
+
+  .navItem {
+    margin: 0 0.5rem;
+  }
+
+  .ui.segment {
+    padding: 1em 0.5em;
+  }
+
+  .ui.container {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}

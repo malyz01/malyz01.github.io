@@ -1,0 +1,60 @@
+h1 {
+  text-align: center;
+}
+
+.headerDescription {
+  margin: 1.5rem auto 0;
+  max-width: 600px;
+  text-align: justify;
+}
+
+.highlight {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 700;
+  color: #16afa0;
+}
+
+.linkContainer,
+.linkDetail {
+  min-width: 300px;
+  max-width: 600px;
+  margin: auto;
+}
+
+.linkContainer {
+  height: 200px;
+  background-image: linear-gradient(to right, #16afa0, #37c6b8);
+  border: 0.5px solid black;
+  overflow: hidden;
+}
+
+.linkDetail {
+  text-align: justify;
+  padding: 2rem 0;
+}
+
+.linkContent {
+  line-height: 200px;
+  text-align: center;
+  vertical-align: middle;
+  font-family: "Shanti", sans-serif;
+  font-size: 2.5rem;
+  text-shadow: 1px 2px rgb(192, 192, 192);
+  color: white;
+  transition: 0.3s ease-in-out;
+}
+
+.linkContent:hover {
+  transform: scale(1.3);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  body {
+    font-size: 1rem;
+  }
+}

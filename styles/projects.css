@@ -1,0 +1,44 @@
+.projectContainer {
+  min-width: 300px;
+  max-width: 600px;
+  margin: auto;
+  text-align: justify;
+}
+
+.projectHeader {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 2rem;
+  line-height: 2rem;
+}
+
+.projectLink {
+  margin: 1rem auto;
+  padding: 0.5rem 0;
+  position: relative;
+  transition: all 0.6s ease;
+}
+
+.projectLink:hover {
+  cursor: pointer;
+  opacity: 0.6;
+  transform: scale(0.95);
+}
+
+.projectLink::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: -0.5%;
+  opacity: 0;
+  background: black;
+  transition: all 0.6s ease;
+}
+
+.projectLink:hover::before {
+  opacity: 1;
+}
+
+.projectBody {
+  font-family: "Work Sans", sans-serif;
+}
