@@ -126,7 +126,7 @@ pre {
 }
 
 .navItem:hover {
-  transform: translateY(-1px);
+  transform: scale(1.1);
 }
 
 .footerContainer {
