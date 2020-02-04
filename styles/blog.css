@@ -11,11 +11,14 @@ hr {
 }
 
 .sHeader {
-  font-family: "Shanti", sans-serif;
-  font-size: 2rem;
+  font-family: "Work Sans", sans-serif;
+  font-size: 1.5em;
+  font-weight: 600;
+  letter-spacing: 1px;
   text-align: center;
   margin: 2rem 0 4rem;
-  color: #16afa0;
+  color: #37b6a9;
+  opacity: 0.9;
 }
 
 .sTopic {

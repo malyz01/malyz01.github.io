@@ -24,7 +24,6 @@ h1 {
 .linkContainer {
   height: 200px;
   background-image: linear-gradient(to right, #16afa0, #37c6b8);
-  border: 0.5px solid black;
   overflow: hidden;
 }
 
@@ -39,7 +38,7 @@ h1 {
   vertical-align: middle;
   font-family: "Shanti", sans-serif;
   font-size: 2.5rem;
-  text-shadow: 1px 2px rgb(192, 192, 192);
+  text-shadow: 2px 2px 8px #000000;
   color: white;
   transition: 0.3s ease-in-out;
 }
