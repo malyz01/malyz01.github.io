@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", startGame);
+// document.addEventListener("DOMContentLoaded", startGame);
 document.addEventListener("click", checkForWin);
 document.addEventListener("contextmenu", checkForWin);
 
@@ -6,10 +6,7 @@ document.addEventListener("contextmenu", checkForWin);
 var board = {
   cells: []
 };
-
-function getNoOfBomb() {
-  return board.cells.filter(c => c.isMine).length;
-}
+var gameStarted = false;
 
 function generateRandomBool(num) {
   return Math.random() >= 0.6;
@@ -56,12 +53,29 @@ function generateBoard(num = 2) {
       hidden: true
     };
   }
+  board.cells.forEach(x => (x.surroundingMines = countSurroundingMines(x)));
+}
+
+function hideIntro() {
+  const intro = document.getElementById("intro");
+  intro.classList.add("hide");
+}
+
+function showPlayAgain() {
+  const playAgain = document.getElementById("playAgain");
+  playAgain.classList.remove("hide");
+}
+
+function playWinSound() {
+  const sound = document.getElementById("win");
+  sound.play();
 }
 
 function startGame(x) {
   // Don't remove this function call: it makes the game work!
-  generateBoard(6);
-  board.cells.forEach(x => (x.surroundingMines = countSurroundingMines(x)));
+  gameStarted = true;
+  generateBoard(x);
+  hideIntro();
   lib.initBoard();
 }
 
@@ -79,7 +93,11 @@ function checkForWin() {
   const showingAllCell =
     cells.map(c => !c.hidden).filter(c => c).length ===
     cells.map(c => !c.isMine).filter(c => c).length;
-  if (showingAllCell && markedAllBombs) lib.displayMessage("You win!");
+  if (gameStarted && showingAllCell && markedAllBombs) {
+    lib.displayMessage("You win!");
+    playWinSound();
+    showPlayAgain();
+  }
 }
 
 // Define this function to count the number of mines around the cell

@@ -66,6 +66,26 @@ function addListeners(boardNode) {
   }
 }
 
+function showPlayAgain() {
+  const showPlayAgain = document.getElementById("playAgain");
+  showPlayAgain.classList.remove("hide");
+}
+
+function playBombSound() {
+  const sound = document.getElementById("bomb");
+  sound.play();
+}
+
+function playMarkSound() {
+  const sound = document.getElementById("mark");
+  sound.play();
+}
+
+function playShowCellSound() {
+  const sound = document.getElementById("showCell");
+  sound.play();
+}
+
 function showCell(evt) {
   var idx = getCellIndex(getRow(evt.target), getCol(evt.target));
   var cell = board.cells[idx];
@@ -74,11 +94,14 @@ function showCell(evt) {
   evt.target.classList.remove("hidden");
   evt.target.classList.remove("marked");
   if (evt.target.classList.contains("mine")) {
+    showPlayAgain();
+    playBombSound();
     displayMessage("BOOM!");
     revealMines();
     removeListeners();
     return;
   }
+  playShowCellSound();
   setInnerHTML(cell);
   if (cell.surroundingMines === 0) {
     showSurrounding(evt.target);
@@ -88,6 +111,7 @@ function showCell(evt) {
 function markCell(evt) {
   evt.preventDefault();
   evt.target.classList.toggle("marked");
+  playMarkSound();
   var idx = getCellIndex(getRow(evt.target), getCol(evt.target));
   var cell = board.cells[idx];
   cell.isMarked = cell.isMarked ? false : true;

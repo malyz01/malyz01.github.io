@@ -9,8 +9,13 @@ body {
   align-items: center;
   justify-content: flex-center;
   flex-direction: column;
-  background-image: url("./images/bg.jpg");
-  background-size: cover;
+  background: linear-gradient(to bottom, #7031f7 0%, #9819e8 51%, #7031f7 100%);
+  background-size: contain;
+}
+
+ul {
+  list-style: disc;
+  margin-block-start: 0.1em;
 }
 
 #message,
@@ -30,6 +35,61 @@ body {
   text-shadow: 2px 2px 8px #000000;
 }
 
+.gameOptionsContainer {
+  padding-top: 10rem;
+  min-height: 50px;
+  color: Black;
+  display: flex;
+  flex-direction: column;
+}
+
+.introHeader {
+  font-family: monospace;
+  font-size: 4rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #e0dfdc;
+  letter-spacing: 0.1em;
+  text-shadow: 0 -1px 0 #fff, 0 1px 0 #2e2e2e, 0 2px 0 #2c2c2c, 0 3px 0 #2a2a2a,
+    0 4px 0 #282828, 0 5px 0 #262626, 0 6px 0 #242424,
+    -13px -37px 3px rgba(206, 89, 55, 0);
+  animation: dropin 0.5s ease;
+}
+
+.introImage {
+  align-self: center;
+  margin-bottom: 1.5rem;
+  animation: fadein 0.3s ease 0.5s;
+  animation-fill-mode: both;
+}
+
+.introMessage {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: #ffffff;
+  text-shadow: 2px 2px 0 black;
+  animation: fadein 0.3s ease 0.5s;
+  animation-fill-mode: both;
+}
+
+.buttonContainers {
+  margin: 0 auto 2rem;
+  animation: fadein 0.3s ease 0.5s;
+  animation-fill-mode: both;
+}
+
+.introInstructions {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #ffffff;
+  text-shadow: 2px 2px 0 black;
+  animation: fadein 0.3s ease 0.5s;
+  animation-fill-mode: both;
+}
+
 .board {
   display: flex;
   flex-wrap: wrap;
@@ -42,7 +102,7 @@ body {
   height: 75px;
   border: 1px black dotted;
   border-radius: 10%;
-  background-color: rgb(241, 241, 241);
+  background-color: rgb(226, 226, 226);
   margin: 3px;
   display: flex;
   align-items: center;
@@ -54,25 +114,109 @@ body {
   cursor: pointer;
 }
 
+.myButton {
+  box-shadow: 1px 2px 0px 0px #8a2a21;
+  background: linear-gradient(to bottom, #c62d1f 5%, #f24437 100%);
+  background-color: #c62d1f;
+  border-radius: 18px;
+  border: 1px solid #d02718;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 17px;
+  padding: 7px 25px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #810e05;
+}
+.myButton:hover {
+  background: linear-gradient(to bottom, #f24437 5%, #c62d1f 100%);
+  background-color: #f24437;
+}
+.myButton:active {
+  position: relative;
+  top: 1px;
+}
+
+.playAgainBtn {
+  box-shadow: inset 0px 1px 0px 0px #f9eca0;
+  background: linear-gradient(to bottom, #f0c911 5%, #f2ab1e 100%);
+  background-color: #f0c911;
+  border-radius: 6px;
+  border: 1px solid #e65f44;
+  display: inline-block;
+  cursor: pointer;
+  color: #c92200;
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 6px 24px;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #ded17c;
+  margin-bottom: 1.5rem;
+  animation: fadein 0.3s ease;
+}
+.playAgainBtn:hover {
+  background: linear-gradient(to bottom, #f2ab1e 5%, #f0c911 100%);
+  background-color: #f2ab1e;
+}
+.playAgainBtn:active {
+  position: relative;
+  top: 1px;
+}
+
 div.mine,
 div.mine:hover {
   background: no-repeat center/60% url("images/bomb.svg") crimson;
 }
 
 div.hidden {
-  background: linear-gradient(#f3f3f3, #dddbd8);
+  background: linear-gradient(#c7c7c7, #acaaa9);
   position: relative;
 }
 
 div.hidden:hover {
-  background: linear-gradient(#dddbd8, #f3f3f3);
+  background: linear-gradient(#acaaa9, #c7c7c7);
 }
 
 div.marked,
 div.marked:hover {
-  background: no-repeat center/60% url("images/mark.svg") deepskyblue;
+  background: no-repeat center/60% url("images/mark.svg") red;
 }
 
 .hide {
   display: none;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes dropin {
+  from {
+    transform: translateY(-40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes scaling {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(2.2);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
