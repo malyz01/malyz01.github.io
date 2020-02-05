@@ -132,6 +132,7 @@ pre {
 .footerContainer {
   text-align: center;
   margin-top: 4rem !important;
+  margin-bottom: 0 !important;
   min-height: 100px;
   display: flex;
   background-image: linear-gradient(to right, #16afa0, #09897a) !important;

@@ -9,6 +9,8 @@
   font-family: "Fira Sans", sans-serif;
   font-size: 2rem;
   line-height: 2rem;
+
+  padding: 0.5rem 0 1rem;
 }
 
 .projectLink {
@@ -23,13 +25,7 @@
 }
 
 .projectLink::before {
-  content: "LAUNCH";
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-family: "Fira Sans", sans-serif;
-  font-size: 2rem;
+  content: "";
   position: absolute;
   height: 100%;
   width: 100%;
@@ -44,6 +40,40 @@
   opacity: 0.7;
 }
 
+.projectLink::after {
+  content: "OPEN";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: "Fira Sans", sans-serif;
+  font-size: 2.5rem;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 10;
+  opacity: 0;
+  transition: all 0.4s ease;
+  z-index: 3;
+}
+
+.projectLink:hover::after {
+  opacity: 1;
+  top: 0;
+  animation: dropin 0.5s ease;
+}
+
 .projectBody {
   font-family: "Work Sans", sans-serif;
+}
+
+@keyframes dropin {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
 }
