@@ -9,7 +9,7 @@ body {
   align-items: center;
   justify-content: flex-center;
   flex-direction: column;
-  background: linear-gradient(to bottom, #7031f7 0%, #9819e8 51%, #7031f7 100%);
+  background: linear-gradient(to bottom, #5531f7 0%, #7c5fff 51%, #5531f7 100%);
   background-size: contain;
 }
 
