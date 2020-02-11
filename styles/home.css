@@ -25,6 +25,7 @@ h1 {
   height: 200px;
   background-image: linear-gradient(to right, #16afa0, #37c6b8);
   overflow: hidden;
+  border-radius: 15px;
 }
 
 .linkDetail {

@@ -26,12 +26,14 @@ h3 {
   background-color: white;
   border: 1px solid #16afa0;
   color: #16afa0;
+  border-radius: 10px 0 0 10px;
 }
 
 .linkTechnical {
   background-color: #16afa0;
   color: white;
   text-shadow: 2px 2px #28b7a6;
+  border-radius: 0 10px 10px 0;
 }
 
 .linkContent {
@@ -67,6 +69,14 @@ h3 {
     overflow: hidden;
     text-align: center;
     vertical-align: middle;
+  }
+
+  .linkCore {
+    border-radius: 10px 10px 0 0;
+  }
+
+  .linkTechnical {
+    border-radius: 0 0 10px 10px;
   }
 
   .linkContent {
