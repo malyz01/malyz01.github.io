@@ -1,0 +1,96 @@
+body {
+  font-family: "Rye", cursive;
+  background-image: url("../images//carnival.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  text-shadow: 0px 1px 10px #2e2c2e;
+  font-size: 1rem;
+}
+
+h2 {
+  margin-top: 100px;
+  font-size: 2em;
+  text-align: center;
+}
+
+table {
+  margin-right: center;
+  margin-left: center;
+  margin: 0 auto;
+  transition: all 0.2s ease;
+}
+
+td {
+  background-color: BurlyWood;
+  height: 100px;
+  width: 100px;
+  border: 5px solid black;
+}
+
+.hide {
+  display: none !important;
+}
+
+.inflate-an-image {
+  display: inline-block;
+  width: 400px;
+  height: 400px;
+  margin: 5px;
+}
+
+.dress-a-parent {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.dress-an-image {
+  position: absolute;
+  margin: auto;
+}
+
+#head {
+  z-index: 2;
+}
+
+#body {
+  z-index: 0;
+}
+
+#shoes {
+  z-index: 1;
+}
+
+#picker {
+  text-transform: capitalize;
+  font-size: 1.7rem;
+  font-weight: 700;
+  padding-top: 1rem;
+}
+
+.container {
+  text-align: center;
+}
+
+.ferris-wheel-car {
+  width: 50px;
+  height: 50px;
+  background-color: red;
+}
+
+.headingContainer {
+  font-size: 2em;
+  text-align: center;
+  padding: 1.5rem 0;
+}
+
+.myContainer {
+  padding: 0.8em 0;
+  text-align: center;
+  margin: auto;
+  max-width: 500px;
+  background-color: #9b0c0cce;
+  border-radius: 15px;
+  border: 3px solid black;
+}

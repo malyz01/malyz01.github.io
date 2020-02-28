@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=0, maximum-scale=1, minimum-scale=1"
+    />
+    <title>JAVASCRIPT CARNIVAL: Whack-a-Mole!</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Rye&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../main.css" />
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+
+  <body>
+    <div class="headingContainer">
+      <div>JAVASCRIPT CARNIVAL</div>
+      <div>Whack-a-Mole!</div>
+    </div>
+
+    <div id="playBtn" style="text-align: center;">
+      <div class="myButton" onclick="startGame()">
+        PLAY!
+      </div>
+    </div>
+
+    <div id="scoreboard" class="scoreboard hide">
+      <div class="score">
+        Score
+        <div id="score">0</div>
+      </div>
+      <div id="timer" class="timer"></div>
+      <div class="highscore">
+        Highscore
+        <div id="highscore">-</div>
+      </div>
+    </div>
+
+    <div class="tableContainer">
+      <div id="resetBtn" class="hide playAgainBtnContainer">
+        <div class="myButton" onclick="resetGame()">
+          Play Again
+        </div>
+      </div>
+      <table id="myTable">
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+    </div>
+
+    <script src="whack-a-mole.js"></script>
+  </body>
+</html>

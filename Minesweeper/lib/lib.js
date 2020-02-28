@@ -72,18 +72,18 @@ function showPlayAgain() {
 }
 
 function playBombSound() {
-  const sound = document.getElementById("bomb");
-  sound.play();
+  const myAudio = new Audio("../sounds/bomb.mp3");
+  myAudio.play();
 }
 
 function playMarkSound() {
-  const sound = document.getElementById("mark");
-  sound.play();
+  const myAudio = new Audio("../sounds/mark.mp3");
+  myAudio.play();
 }
 
 function playShowCellSound() {
-  const sound = document.getElementById("showCell");
-  sound.play();
+  const myAudio = new Audio("../sounds/clicked.mp3");
+  myAudio.play();
 }
 
 function showCell(evt) {

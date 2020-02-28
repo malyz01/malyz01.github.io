@@ -67,8 +67,8 @@ function showPlayAgain() {
 }
 
 function playWinSound() {
-  const sound = document.getElementById("win");
-  sound.play();
+  const myAudio = new Audio("../sounds/win.mp3");
+  myAudio.play();
 }
 
 function startGame(x) {
