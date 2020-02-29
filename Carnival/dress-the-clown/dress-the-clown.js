@@ -4,7 +4,14 @@
 
 const parts = ["head", "body", "shoes"];
 let part = 1;
-let style = 4;
+let style = { head: 4, body: 4, shoes: 4 };
+const head = document.getElementById("head");
+const body = document.getElementById("body");
+const shoes = document.getElementById("shoes");
+const canvas = document.getElementById("canvas");
+canvas.width = head.width;
+canvas.height = head.height;
+const context = canvas.getContext("2d");
 
 document.addEventListener("keydown", function(e) {
   if (e.key === "ArrowUp" || e.key === "ArrowDown") {
@@ -23,14 +30,14 @@ function choosePart(arrow) {
     if (part === 0) {
       part = 2;
     } else {
-      part -= 1;
+      part--;
     }
   }
   if (arrow === "ArrowDown") {
     if (part === 2) {
       part = 0;
     } else {
-      part += 1;
+      part++;
     }
   }
   return part;
@@ -38,18 +45,47 @@ function choosePart(arrow) {
 
 function chooseStyle(arrow) {
   if (arrow === "ArrowLeft") {
-    if (style === 0) {
-      style = 5;
+    if (style[parts[part]] === 0) {
+      style[parts[part]] = 5;
     } else {
-      style -= 1;
+      style[parts[part]]--;
     }
   }
   if (arrow === "ArrowRight") {
-    if (style === 5) {
-      style = 0;
+    if (style[parts[part]] === 5) {
+      style[parts[part]] = 0;
     } else {
-      style += 1;
+      style[parts[part]]++;
     }
   }
-  return style;
+  return style[parts[part]];
+}
+
+function makeCanvas() {
+  context.clearRect(0, 0, canvas.width, canvas.height);
+  var imageObj2 = new Image();
+  imageObj2.src = `./images/body${style.body}.png`;
+  context.drawImage(imageObj2, 0, 0, canvas.width, canvas.height);
+
+  var imageObj1 = new Image();
+  imageObj1.src = `./images/head${style.head}.png`;
+  context.drawImage(imageObj1, 0, 0, canvas.width, canvas.height);
+
+  var imageObj3 = new Image();
+  imageObj3.src = `./images/shoes${style.shoes}.png`;
+  context.drawImage(imageObj3, 0, 0, canvas.width, canvas.height);
+}
+
+function saveImage() {
+  makeCanvas();
+  if (window.navigator.msSaveBlob) {
+    window.navigator.msSaveBlob(canvas.msToBlob(), "My-Clown.png");
+  } else {
+    const a = document.createElement("a");
+    document.body.appendChild(a);
+    a.href = canvas.toDataURL();
+    a.download = "My-Clown.png";
+    a.click();
+    document.body.removeChild(a);
+  }
 }

@@ -28,14 +28,16 @@
       <div>
         <strong>Up</strong> or <strong>Down</strong> to select body part
       </div>
-      <div style="margin-top: 1rem;">
-        Current selected: <span id="picker">Body</span>
+      <div class="section">Current selected: <span id="picker">Body</span></div>
+      <div class="section">
+        <button class="downloadBtn" onclick="saveImage()">Save Image</button>
       </div>
     </div>
     <div class="dress-a-parent">
       <img id="head" class="dress-an-image" src="./images/head4.png" />
       <img id="body" class="dress-an-image" src="./images/body4.png" />
       <img id="shoes" class="dress-an-image" src="./images/shoes4.png" />
+      <canvas id="canvas"></canvas>
     </div>
     <script src="dress-the-clown.js"></script>
   </body>
