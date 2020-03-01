@@ -7,7 +7,7 @@ let part = 1;
 let style = { head: 4, body: 4, shoes: 4 };
 const canvas = document.getElementById("canvas");
 canvas.width = document.getElementById("head").width;
-canvas.height = head.height;
+canvas.height = document.getElementById("head").height;
 const context = canvas.getContext("2d");
 
 document.addEventListener("keydown", function(e) {
