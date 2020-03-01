@@ -5,11 +5,8 @@
 const parts = ["head", "body", "shoes"];
 let part = 1;
 let style = { head: 4, body: 4, shoes: 4 };
-const head = document.getElementById("head");
-const body = document.getElementById("body");
-const shoes = document.getElementById("shoes");
 const canvas = document.getElementById("canvas");
-canvas.width = head.width;
+canvas.width = document.getElementById("head").width;
 canvas.height = head.height;
 const context = canvas.getContext("2d");
 
