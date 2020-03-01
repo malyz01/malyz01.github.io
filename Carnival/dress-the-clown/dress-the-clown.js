@@ -4,7 +4,7 @@
 
 const parts = ["head", "body", "shoes"];
 let part = 1;
-let style = { head: 4, body: 4, shoes: 4 };
+let style = { head: 3, body: 4, shoes: 4 };
 const canvas = document.getElementById("canvas");
 canvas.width = document.getElementById("head").width;
 canvas.height = document.getElementById("head").height;
@@ -16,9 +16,8 @@ document.addEventListener("keydown", function(e) {
     document.getElementById("picker").innerHTML = parts[part];
   }
   if (e.key === "ArrowLeft" || e.key === "ArrowRight") {
-    document.getElementById(parts[part]).src = `./images/${
-      parts[part]
-    }${chooseStyle(e.key)}.png`;
+    document.getElementById(parts[part]).src = `./images/${parts[part] +
+      chooseStyle(e.key)}.png`;
   }
 });
 
@@ -59,7 +58,6 @@ function chooseStyle(arrow) {
 }
 
 function makeCanvas() {
-  context.clearRect(0, 0, canvas.width, canvas.height);
   var imageObj2 = new Image();
   imageObj2.src = `./images/body${style.body}.png`;
   context.drawImage(imageObj2, 0, 0, canvas.width, canvas.height);
@@ -85,4 +83,5 @@ function saveImage() {
     a.click();
     document.body.removeChild(a);
   }
+  context.clearRect(0, 0, canvas.width, canvas.height);
 }
