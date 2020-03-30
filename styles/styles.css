@@ -153,7 +153,18 @@ pre {
   cursor: pointer;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 320px) {
+  .navLogo {
+    font-size: 1rem;
+  }
+
+  .navItem {
+    font-size: 0.9rem;
+    margin: 0 0.2rem !important;
+  }
+}
+
+@media only screen and (max-width: 768px) {
   .navLogo {
     align-self: center;
     font-size: 1.4rem;
@@ -175,6 +186,20 @@ pre {
   .ui.container {
     margin-left: 0 !important;
     margin-right: 0 !important;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .navLogo {
+    font-size: 2.5rem;
+  }
+
+  .navLinks {
+    font-size: 1.5rem;
+  }
+
+  .navItem {
+    margin: 0 1rem;
   }
 }
 
